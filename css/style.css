@@ -63,10 +63,85 @@ img {
     color: var(--primary-color);
 }
 
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+/* la pseudo class :last-child va prendre le dernier élément de la liste pour lui appliquer à lui seul les propriétés CSS, en loccurence ici le lien <a> (bouton) dernier éllément de la liste*/
 
 
 
-/* Selecteurs spécifiques */
+/* Hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero .container {
+    background: url(../images/hero-bg.png) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 550px;
+}
+
+.hero .hero-content {
+    width: 70%;
+}
+
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+
+/* Video */
+
+.video {
+    padding: 10px 0 40px;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-preview {
+    margin-bottom: 20px;
+}
+
+
+/* Testimonials */
+
+.testimonials {
+    padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /*ou repeat(3, 1fr);*/
+    gap: 30px;
+}
+
+.testimonials .card p:nth-child(1) {
+    font-style: italic;
+}
+
+.testimonials .card p:nth-child(2) /*la pseudo class nth-child(2) me permet de prendre le deuxième paragraphe indépendament des 2 autres le 1er et le 3eme par je veux iniquement appliquer ma proriété CSS au paragraphe 2*/ {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+
+/* Selecteurs spécifiques ou utility classes a réutilsier à chaque nouveau tag pour ne pas retaper systématiquemet les classes, ce sont des sorte de template de class déja paramétrée pour avoir un site uniforme*/
 
 .container {
     max-width: 1100px;
@@ -75,7 +150,119 @@ img {
 }
 
 .container-sm {
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/* Card */
+
+.card {
+    background: #FFF;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+/*Boutons*/
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+.btn-dark {
+    background-color: var(--dark-color);
+    color: #FFF;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+
+
+/*Text classes*/
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Background */
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #FFF;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #000;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #FFF;
+}
+
+.bg-black {
+    background: #000;
+    color: #FFF;
+}
+
