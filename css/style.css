@@ -70,6 +70,7 @@ img {
 .navbar ul li:last-child a {
     margin-left: 10px;
 }
+
 /* la pseudo class :last-child va prendre le dernier élément de la liste pour lui appliquer à lui seul les propriétés CSS, en loccurence ici le lien <a> (bouton) dernier éllément de la liste*/
 
 
@@ -127,7 +128,8 @@ img {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  /*ou repeat(3, 1fr);*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*ou repeat(3, 1fr);*/
     gap: 30px;
 }
 
@@ -135,13 +137,17 @@ img {
     font-style: italic;
 }
 
-.testimonials .card p:nth-child(2) /*la pseudo class nth-child(2) me permet de prendre le deuxième paragraphe indépendament des 2 autres le 1er et le 3eme par je veux iniquement appliquer ma proriété CSS au paragraphe 2*/ {
+.testimonials .card p:nth-child(2)
+
+/*la pseudo class nth-child(2) me permet de prendre le deuxième paragraphe indépendament des 2 autres le 1er et le 3eme par je veux iniquement appliquer ma proriété CSS au paragraphe 2*/
+    {
     margin-top: 30px;
     font-weight: bold;
 }
 
 
-/* Pricing*/ /*Bonne pratique de */
+/* Pricing*/
+/*Bonne pratique de */
 
 .pricing-grid {
     display: grid;
@@ -211,7 +217,8 @@ img {
     display: none;
 }
 
-.faq .faq-group .faq-group-body.open {/*Je colle ici de .open a la classe group body pour vérifier si la classe groupe body a la classe open*/ 
+.faq .faq-group .faq-group-body.open {
+    /*Je colle ici de .open a la classe group body pour vérifier si la classe groupe body a la classe open*/
     display: block;
 }
 
@@ -240,6 +247,44 @@ img {
 }
 
 
+/* FOOTER*/
+
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    line-height: 2.5;
+    color: #CCC;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card {
+    margin: 20px 30px 30px 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    margin: 20px 0;
+}
 
 /* Selecteurs spécifiques ou utility classes a réutilsier à chaque nouveau tag pour ne pas retaper systématiquemet les classes, ce sont des sorte de template de class déja paramétrée pour avoir un site uniforme*/
 
@@ -366,4 +411,3 @@ img {
     background: #000;
     color: #FFF;
 }
-
